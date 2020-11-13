@@ -16,3 +16,12 @@ Data in mongoDB is stored as a documents stored in the form of collection of doc
 * Instance - a single machine locally or in the cloud, running a certain software, in our case it is the MongoDB database.
 
 * Cluster - group of servers that store your data.
+
+**JSON**
+JavaScript standard object notation 
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/03airaq82dewlmx7ovdt.png)
+
+**BSON**
+binary JSON
+optimized for speed flexibility space high performance
+* Data in MongoDB stored in BSON format both internally and over the network.
