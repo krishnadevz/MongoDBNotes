@@ -26,3 +26,11 @@ binary JSON
 optimized for speed flexibility space high performance
 * Data in MongoDB stored in BSON format both internally and over the network.
 * In mongoDB data is stored in BSON but viewed in JSON because it is more human reable than binary BSON format.
+
+**Export JSON**
+* mongoimport
+* mongoexport
+
+**Export JSON**
+* mongorestore
+* mongodump
