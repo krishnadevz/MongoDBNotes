@@ -34,3 +34,29 @@ optimized for speed flexibility space high performance
 **Export JSON**
 * mongorestore
 * mongodump
+
+**URI string**
+* uniform resource identifier 
+* srv establishes the secure collection
+
+**Namespace - The concatenation of the database name and collection name is called a namespace.**
+
+* We looked at the sample_training.zips collection and issued the following queries:
+In collectons filters this things done in mongodb atlas 
+   Ex * {"state": "NY"}
+      * {"state": "NY", "city": "ALBANY"}
+
+**In local system using mongodb community edition server**
+* For connecting `mongo "mongodb+srv://sandbox-jbc3i.mongodb.net/test" --username m001-student`
+show dbs
+
+use sample_training
+
+show collections
+
+db.zips.find({"state": "NY"})
+db.zips.find({"state": "NY"}).count()
+
+db.zips.find({"state": "NY", "city": "ALBANY"})
+
+db.zips.find({"state": "NY", "city": "ALBANY"}).pretty()
