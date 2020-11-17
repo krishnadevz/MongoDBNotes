@@ -60,3 +60,5 @@ db.zips.find({"state": "NY"}).count()
 db.zips.find({"state": "NY", "city": "ALBANY"})
 
 db.zips.find({"state": "NY", "city": "ALBANY"}).pretty()
+**Practice excercise command**
+* db.inspections.find().count()
