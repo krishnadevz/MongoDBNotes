@@ -62,3 +62,29 @@ db.zips.find({"state": "NY", "city": "ALBANY"})
 db.zips.find({"state": "NY", "city": "ALBANY"}).pretty()
 **Practice excercise command**
 * db.inspections.find().count()
+
+**get a random document from the collection:**
+
+* db.inspections.findOne();
+
+**Insert random document Query**
+```js 
+db.inspections.insert({
+...         "_id" : ObjectId("56d61033a378eccde8a8357b"),
+...         "id" : "11201-2015-ENFO",
+...         "certificate_number" : 9278356,
+...         "business_name" : "TEN KESEF II, INC.",
+...         "date" : "Feb  3 2015",
+...         "result" : "No Violation Issued",
+...         "sector" : "Misc Non-Food Retail - 817",
+...         "address" : {
+...                 "city" : "BROOKLYN",
+...                 "zip" : 11234,
+...                 "street" : "FLATBUSH AVE",
+...                 "number" : 5352
+...         }
+... })
+```
+
+**Find Document with pretty()**
+* db.inspections.find({"id" : "10021-2015-ENFO", "certificate_number" : 9278806}).pretty()
