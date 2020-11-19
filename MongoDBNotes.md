@@ -104,7 +104,8 @@ db.inspections.insert({
 * db.zips.updateOne({ "zip": "12534" }, { "$set": { "pop": 17630 } }) set used set update specified value 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/wg7ioqn2do2r5r7o42h9.png)
 * $push 
-```js db.grades.updateOne({ "student_id": 250, "class_id": 339 },
+```js
+db.grades.updateOne({ "student_id": 250, "class_id": 339 },
                     { "$push": { "scores": { "type": "extra credit",
                                              "score": 100 }
                                 }
