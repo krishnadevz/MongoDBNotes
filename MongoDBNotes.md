@@ -118,4 +118,5 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 **Deleting documents in mongoDB**
 * db.inspections.deleteMany({ "test": 1 }) /(test 1 is the id )
 * when we delete all collections in mongodb database When the database is empty it no longer exists.
+* deleting database collections using db.inspection.drop()
 
