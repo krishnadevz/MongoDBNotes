@@ -48,7 +48,8 @@ In collectons filters this things done in mongodb atlas
 
 **In local system using mongodb community edition server**
 * For connecting `mongo "mongodb+srv://sandbox-jbc3i.mongodb.net/test" --username m001-student`
-show dbs
+
+show dbs (for showing/getting databases in cmd/shell)
 
 use sample_training
 
@@ -88,3 +89,24 @@ db.inspections.insert({
 
 **Find Document with pretty()**
 * db.inspections.find({"id" : "10021-2015-ENFO", "certificate_number" : 9278806}).pretty()
+
+**Inserting new documents**
+* db.inspections.insert([ { "test": 1 }, { "test": 2 }, { "test": 3 } ]) array of documents.
+
+**If i missspelled database name in insert query in mongodb then i will not get error infact new that missspelled name database created in collections**
+
+**MQL -mongo query lanagauge**
+* updateOne() or updateMany()
+* findOne() or find() 
+* finding the all documents in the zips collection where the city field is equal to "HUDSON".
+* db.zips.find({ "city": "HUDSON" }).pretty()
+* $inc MQL insert operator db.zips.updateMany({ "city": "HUDSON" }, { "$inc": { "pop": 10 } })
+* db.zips.updateOne({ "zip": "12534" }, { "$set": { "pop": 17630 } }) set used set update specified value 
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/wg7ioqn2do2r5r7o42h9.png)
+* $push 
+```js db.grades.updateOne({ "student_id": 250, "class_id": 339 },
+                    { "$push": { "scores": { "type": "extra credit",
+                                             "score": 100 }
+                                }
+                     })```
+   
