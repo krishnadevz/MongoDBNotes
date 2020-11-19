@@ -104,10 +104,18 @@ db.inspections.insert({
 * db.zips.updateOne({ "zip": "12534" }, { "$set": { "pop": 17630 } }) set used set update specified value 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/wg7ioqn2do2r5r7o42h9.png)
 * $push 
-```js
+``` js
 db.grades.updateOne({ "student_id": 250, "class_id": 339 },
                     { "$push": { "scores": { "type": "extra credit",
                                              "score": 100 }
                                 }
-                     })```
+                     })
+                     
+ ```
+                 
+  ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/s3nx7ygeyxmtwzyw2ub4.png)
    
+**Deleting documents in mongoDB**
+* db.inspections.deleteMany({ "test": 1 }) /(test 1 is the id )
+* when we delete all collections in mongodb database When the database is empty it no longer exists.
+
