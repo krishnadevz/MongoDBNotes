@@ -119,4 +119,10 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * db.inspections.deleteMany({ "test": 1 }) /(test 1 is the id )
 * when we delete all collections in mongodb database When the database is empty it no longer exists.
 * deleting database collections using db.inspection.drop()
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/c9moft0tpntsb5ruuad7.png)
 
+**Comparison operators in mongodb**
+* $eq =Equal to  || $neq=not equal to
+* $gt greater than || $lt=less than 
+* $get greater than equal to || $lte = less than equal to
+* {"tripduration":{"$lte":70},"usertype":{"$ne":"Subscriber"}}
