@@ -129,3 +129,8 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * mongo shell query db.trips.find({ "tripduration": { "$lte" : 70 },
                 "usertype": { "$ne": "Subscriber" } }).pretty()
 * db.zips.find({ "pop": { "$lt": 1000 }}).count()
+**Logical Operators**
+* $and match all of the specified query clauses
+* $or atleast one of the query clause is matched 
+* $nor fail to match both query clauses 
+* $not negates the query requirement
