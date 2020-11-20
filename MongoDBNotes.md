@@ -126,3 +126,6 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * $gt greater than || $lt=less than 
 * $get greater than equal to || $lte = less than equal to
 * {"tripduration":{"$lte":70},"usertype":{"$ne":"Subscriber"}}
+* mongo shell query db.trips.find({ "tripduration": { "$lte" : 70 },
+                "usertype": { "$ne": "Subscriber" } }).pretty()
+* db.zips.find({ "pop": { "$lt": 1000 }}).count()
