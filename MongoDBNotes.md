@@ -5,6 +5,7 @@ NoSQL database not use always related tables of data Ex:- lbrary cards
 Data in mongoDB is stored as a documents stored in the form of collection of documents mongodb is NoSQL document database.
 * Document - a way to organize and store data as a set of field-value pairs.
 
+* A document schema is a JSON object that allows you to define the shape and content of documents and embedded documents in a collection. ... Document schemas follow the same JSON schema specification as document validation in the MongoDB server.
 * Field - a unique identifier for a datapoint.
 
 * Value - data related to a given identifier.
@@ -134,3 +135,13 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * $or atleast one of the query clause is matched 
 * $nor fail to match both query clauses 
 * $not negates the query requirement
+* nor operation `{$nor:[{result:"No Violation Issued"},{result:"Violation Issued"},{result:"Pass"},{result:"fail"}]}`
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/a5skkbhhvee7sklqxzx8.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/61rhyh9vbpz8vlo2grnv.png)                
+```
+*  db.routes.find({ "$and": [ { "$or" :[ { "dst_airport": "KZN" }, { "src_airport": "KZN" }] },{ "$or" :[ { "airplane": "CR2" },{ "airplane": "A81" } ] }]}).count()
+                                   
+                                  
+                          
+                                     
+         
