@@ -135,11 +135,16 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * $or atleast one of the query clause is matched 
 * $nor fail to match both query clauses 
 * $not negates the query requirement
-* nor operation `{$nor:[{result:"No Violation Issued"},{result:"Violation Issued"},{result:"Pass"},{result:"fail"}]}`
+* nor operation {$nor:[{result:"No Violation Issued"},{result:"Violation Issued"},{result:"Pass"},{result:"fail"}]}
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/a5skkbhhvee7sklqxzx8.png)
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/61rhyh9vbpz8vlo2grnv.png)                
-```
-*  db.routes.find({ "$and": [ { "$or" :[ { "dst_airport": "KZN" }, { "src_airport": "KZN" }] },{ "$or" :[ { "airplane": "CR2" },{ "airplane": "A81" } ] }]}).count()
+
+* db.routes.find({ "$and": [ { "$or" :[ { "dst_airport": "KZN" }, { "src_airport": "KZN" }] },{ "$or" :[ { "airplane": "CR2" },{ "airplane": "A81" } ] }]}).count()
+* db.inspections.find({ result:"Out of Business","sector":"Home Improvement Contractor - 100" }).count() quiz chapter4                                     
+* my wrong answer query db.companies.find({ "$and": [ { "$or": [ { "founded_year": 2004 }, { "founded_month": 10 } ] },{ "$or": [ { "category_code": "web" },{ "category_code": "social" }]}]}).count()
+* $expr it allows to use aggregation of expressions within the query langauge expression allows varibles and conditionals 
+                     
+                        
                                    
                                   
                           
