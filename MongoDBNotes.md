@@ -143,7 +143,9 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * db.inspections.find({ result:"Out of Business","sector":"Home Improvement Contractor - 100" }).count() quiz chapter4                                     
 * my wrong answer query db.companies.find({ "$and": [ { "$or": [ { "founded_year": 2004 }, { "founded_month": 10 } ] },{ "$or": [ { "category_code": "web" },{ "category_code": "social" }]}]}).count()
 * $expr it allows to use aggregation of expressions within the query langauge expression allows varibles and conditionals 
-                     
+* {"$expr":{"$eq":["$start station id","$end station id"]}}
+* $ denotes the use of operator ||$ addresses the particular field
+* db.trips.find({"$expr":{"$eq":["$end station id","$start station id"]}}).count()
                         
                                    
                                   
