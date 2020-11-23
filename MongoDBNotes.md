@@ -147,6 +147,9 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * $ denotes the use of operator ||$ addresses the particular field
 * db.trips.find({"$expr":{"$eq":["$end station id","$start station id"]}}).count()
 * db.companies.find({"$expr":{"$eq":["$permalink","$twitter_username"]}}).count() //quiz question answer
+* $size operator for matching size or finding particular element of that size exact size 
+* $all return all documents in which specified array field contains regardless of there order.
+* db.listingsAndReviews.find({ "reviews": { "$size":50 },"accommodates": { "$gt":6 }})
                         
                                    
                                   
