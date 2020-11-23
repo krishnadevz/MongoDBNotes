@@ -146,6 +146,7 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * {"$expr":{"$eq":["$start station id","$end station id"]}}
 * $ denotes the use of operator ||$ addresses the particular field
 * db.trips.find({"$expr":{"$eq":["$end station id","$start station id"]}}).count()
+* db.companies.find({"$expr":{"$eq":["$permalink","$twitter_username"]}}).count() //quiz question answer
                         
                                    
                                   
