@@ -150,7 +150,15 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * $size operator for matching size or finding particular element of that size exact size 
 * $all return all documents in which specified array field contains regardless of there order.
 * db.listingsAndReviews.find({ "reviews": { "$size":50 },"accommodates": { "$gt":6 }})
-* db.listingsAndReviews.find({"property_type":"House","amenities":"Changing table"}).count()                       
+* db.listingsAndReviews.find({"property_type":"House","amenities":"Changing table"}).count() 
+* db.grades.find({ "class_id": 431 },{ "scores": { "$elemMatch": { "score": { "$gt": 85 } } } }).pretty()  //macthing specific element in array
+* db.grades.find({ "scores": { "$elemMatch": { "type": "extra credit" } } }).pretty()
+* db.companies.find({ "offices": { "$elemMatch": { "city": "Seattle" } }}).count()
+* db.trips.findOne({ "start station location.type": "Point" }) //we can use dot to deep dive into the documents collection.
+
+                  
+              
+            
                                    
                                   
                           
