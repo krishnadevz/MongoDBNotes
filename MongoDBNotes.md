@@ -163,6 +163,11 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * db.listingsAndReviews.aggregate([{ "$project": { "address": 1, "_id": 0 }},{ "$group": { "_id": "$address.country","count": { "$sum": 1 } } } ])
 * db.listingsAndReviews.aggregate([{ "$project": { "room_type": 1, "_id": 0 }},{ "$group": { "_id": "$room_type" } } ])   
 * sort in mongodb db.zips.find().sort({"pop":1}).limit(1).pretty()                                                                
+* db.zips.find().sort({ "pop": -1 }).limit(1)
+* db.zips.find().sort({ "pop": -1 }).limit(10).pretty() //top 10 zip codes by population 
+* db.zips.find().sort({ "pop": 1, "city": -1 })
+* db.trips.find({ "birth year": { "$ne":"" } },{ "birth year": 1 }).sort({ "birth year": -1 }).limit(1)
+              
                                   
                                                 
                                
