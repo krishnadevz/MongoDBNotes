@@ -155,8 +155,11 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * db.grades.find({ "scores": { "$elemMatch": { "type": "extra credit" } } }).pretty()
 * db.companies.find({ "offices": { "$elemMatch": { "city": "Seattle" } }}).count()
 * db.trips.findOne({ "start station location.type": "Point" }) //we can use dot to deep dive into the documents collection.
-
-                  
+* db.companies.find({ "relationships.0.person.first_name": "Mark", "relationships.0.title": { "$regex": "CEO" } }, { "name": 1 }).count()
+* db.trips.find({ "start station location.coordinates": { "$lt": -74 }}).count()
+* db.inspections.find({ "address.city": "NEW YORK" }).count() final chapter 4 quiz answer                   
+                   
+                 
               
             
                                    
