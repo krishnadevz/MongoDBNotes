@@ -157,7 +157,16 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * db.trips.findOne({ "start station location.type": "Point" }) //we can use dot to deep dive into the documents collection.
 * db.companies.find({ "relationships.0.person.first_name": "Mark", "relationships.0.title": { "$regex": "CEO" } }, { "name": 1 }).count()
 * db.trips.find({ "start station location.coordinates": { "$lt": -74 }}).count()
-* db.inspections.find({ "address.city": "NEW YORK" }).count() final chapter 4 quiz answer                   
+* db.inspections.find({ "address.city": "NEW YORK" }).count() final chapter 4 quiz answer      
+* db.listingsAndReviews.aggregate([ { "$project": { "address": 1, "_id": 0 }}, { "$group": { "_id": "$address.country" }}]) aggreation frameworks in specific order 
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/74ll21di7vlprdisn3ou.png)
+* db.listingsAndReviews.aggregate([{ "$project": { "address": 1, "_id": 0 }},{ "$group": { "_id": "$address.country","count": { "$sum": 1 } } } ])
+* db.listingsAndReviews.aggregate([{ "$project": { "room_type": 1, "_id": 0 }},{ "$group": { "_id": "$room_type" } } ])   
+* sort in mongodb db.zips.find().sort({"pop":1}).limit(1).pretty()                                                                
+                                  
+                                                
+                               
+                                 
                    
                  
               
