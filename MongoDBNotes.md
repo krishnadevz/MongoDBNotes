@@ -17,6 +17,7 @@ Data in mongoDB is stored as a documents stored in the form of collection of doc
 * Instance - a single machine locally or in the cloud, running a certain software, in our case it is the MongoDB database.
 
 * Cluster - group of servers that store your data.
+* schema -A document schema is a JSON object that allows you to define the shape and content of documents and embedded documents in a collection. ... Document schemas follow the same JSON schema specification as document validation in the MongoDB server.
 
 **JSON**
 JavaScript standard object notation 
