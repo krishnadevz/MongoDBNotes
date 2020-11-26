@@ -167,6 +167,9 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * db.zips.find().sort({ "pop": -1 }).limit(10).pretty() //top 10 zip codes by population 
 * db.zips.find().sort({ "pop": 1, "city": -1 })
 * db.trips.find({ "birth year": { "$ne":"" } },{ "birth year": 1 }).sort({ "birth year": -1 }).limit(1)
+* db.trips.createIndex({ "birth year": 1 }) // indexing is for accessing faster faster the data 
+* db.trips.createIndex({ "start station id": 476, "birth year": 1 })
+
               
                                   
                                                 
