@@ -169,6 +169,8 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
 * db.trips.find({ "birth year": { "$ne":"" } },{ "birth year": 1 }).sort({ "birth year": -1 }).limit(1)
 * db.trips.createIndex({ "birth year": 1 }) // indexing is for accessing faster faster the data 
 * db.trips.createIndex({ "start station id": 476, "birth year": 1 })
+* Data modeling - a way to organize fields in a document to support your application performance and querying capabilities.
+
 
               
                                   
